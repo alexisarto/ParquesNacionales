@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/styles/header.css}">
+  <link rel="stylesheet" th:href="@{/styles/footer.css}">
+  <link rel="stylesheet" th:href="@{/styles/parques.css}">
+  <title>Parques Nacionales del Sur</title>
+</head>
+<header>
+  <section class="isologotipo">
+    <div class="logo">
+      <a href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/PARQUESNACIONALES.png" alt=""></a>
+    </div>
+    <div class="brand">
+      <h3>Parques Nacionales</h3>
+      <h4>República Argentina</h4>
+    </div>
+  </section>
+  <section class="navegacion">
+    <nav>
+      <ul class="links">
+        <li><a class="links_navbar" href="Mapa">Mapa</a></li>
+        <li><a class="links_navbar" href="encuesta">Encuesta</a></li>
+      </ul>
+    </nav>
+  </section>
+</header>
+<body>
+<div class = "img-slider">
+  <div class = "slide active">
+    <img th:src="@{/img/PATAGONIA/patagonia_austral_.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/lago_puelo.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/laguna_blanca.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/lanin.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/lihue_calel.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/los_alerces.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/lihue_calel.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/los_arrayanes.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/nahuel_huapi.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/isla_de_los_estados.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/isla_pinguino.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/makenke.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/monte_leon.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/patagonia.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/perito_moreno.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/tierra_del_fuego.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/PATAGONIA/pn_los_glaciares.jpeg}">
+  </div>
+  <div class="navigation">
+    <div class = "btn active"></div>
+    <div class = "btn"></div>
+    <div class = "btn"></div>
+    <div class = "btn"></div>
+    <div class = "btn"></div>
+    <div class = "btn"></div>
+    <div class = "btn"></div>
+    <div class = "btn"></div>
+    <div class = "btn"></div>
+    <div class = "btn"></div>
+    <div class = "btn"></div>
+    <div class = "btn"></div>
+    <div class = "btn"></div>
+    <div class = "btn"></div>
+    <div class = "btn"></div>
+    <div class = "btn"></div>
+    <div class = "btn"></div>
+  </div>
+</div>
+<script th:src="@{/js/SlideParques.js}"></script>
+</body>
+</html>

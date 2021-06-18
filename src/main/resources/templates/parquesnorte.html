@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/styles/header.css}">
+  <link rel="stylesheet" th:href="@{/styles/footer.css}">
+  <link rel="stylesheet" th:href="@{/styles/parques.css}">
+  <title>Parques Nacionales del Norte</title>
+</head>
+<header>
+  <section class="isologotipo">
+    <div class="logo">
+      <a href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/PARQUESNACIONALES.png" alt=""></a>
+    </div>
+    <div class="brand">
+      <h3>Parques Nacionales</h3>
+      <h4>República Argentina</h4>
+    </div>
+  </section>
+  <section class="navegacion">
+    <nav>
+      <ul class="links">
+        <li><a class="links_navbar" href="Mapa">Mapa</a></li>
+        <li><a class="links_navbar" href="encuesta">Encuesta</a></li>
+      </ul>
+    </nav>
+  </section>
+</header>
+<body>
+<div class="img-slider">
+  <div class = "slide active">
+    <img th:src="@{/img/NORTE/aconquija.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/baritu.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/calilegua.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/copo.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/el_nogalar_de_los_toldos.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/el_rey_.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/formosa.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/laguna_de_los_pozuelos.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/pizarro.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/chaco.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/colonia_benitez.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/el_impenetrable.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/ibera.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/iguazu.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/mburucuya.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/rio_pilcomayo.jpeg}">
+  </div>
+  <div class = "slide">
+    <img th:src="@{/img/NORTE/san_antonio.jpeg}">
+  </div>
+  <div class="navigation">
+    <div class="btn active"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+  </div>
+</div>
+<script th:src="@{/js/SlideParques.js}"></script>
+</body>
+</html>

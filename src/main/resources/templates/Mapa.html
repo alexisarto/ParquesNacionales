@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{/styles/home.css}">
+  <link rel="stylesheet" th:href="@{/styles/header.css}">
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <title>Mapa Interactivo</title>
+</head>
+<body>
+<header>
+  <section class="isologotipo">
+    <div class="logo">
+      <a href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/PARQUESNACIONALES.png" alt=""></a>
+    </div>
+    <div class="brand">
+      <h3>Parques Nacionales</h3>
+      <h4>República Argentina</h4>
+    </div>
+  </section>
+
+  <section class="navegacion">
+
+    <nav>
+      <ul class="links">
+        <li><a class="links_navbar" href="Mapa">Mapa</a></li>
+        <li><a class="links_navbar" href="encuesta">Encuesta</a></li>
+      </ul>
+    </nav>
+  </section>
+</header>
+<iframe src="https://sinia.ambiente.gob.ar/ext_geovisor.php?dt_id=192" width="1550px" height="1550px" style="border:0; margin-top: 100px;" allowfullscreen="yes" ></iframe>
+</body>
+</html>

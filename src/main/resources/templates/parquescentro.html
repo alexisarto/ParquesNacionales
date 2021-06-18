@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/styles/header.css}">
+    <link rel="stylesheet" th:href="@{/styles/footer.css}">
+    <link rel="stylesheet" th:href="@{/styles/parques.css}">
+    <title>Parques Nacionales del Norte</title>
+</head>
+<header>
+    <section class="isologotipo">
+        <div class="logo">
+            <a href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/PARQUESNACIONALES.png"
+                             alt=""></a>
+        </div>
+        <div class="brand">
+            <h3>Parques Nacionales</h3>
+            <h4>República Argentina</h4>
+        </div>
+    </section>
+    <section class="navegacion">
+        <nav>
+            <ul class="links">
+                <li><a class="links_navbar" href="Mapa">Mapa</a></li>
+                <li><a class="links_navbar" href="encuesta">Encuesta</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<body>
+<div class="img-slider">
+    <div class="slide active">
+        <img th:src="@{/img/CENTRO/ciervo_de_los_pantanos.jpeg}">
+    </div>
+    <div class="slide">
+        <img th:src="@{/img/CENTRO/el_leoncito_page.jpeg}">
+    </div>
+    <div class="slide">
+        <img th:src="@{/img/CENTRO/el_palmar.jpeg}">
+    </div>
+    <div class="slide">
+        <img th:src="@{/img/CENTRO/islas_de_santa_fe.jpeg}">
+    </div>
+    <div class="slide">
+        <img th:src="@{/img/CENTRO/pn_campos_del_tuyu.jpeg}">
+    </div>
+    <div class="slide">
+        <img th:src="@{/img/CENTRO/pn_sierra_de_las_quijadas.jpeg}">
+    </div>
+    <div class="slide">
+        <img th:src="@{/img/CENTRO/pn_talampaya_.jpeg}">
+    </div>
+    <div class="slide">
+        <img th:src="@{/img/CENTRO/pre-delta.jpeg}">
+    </div>
+    <div class="slide">
+        <img th:src="@{/img/CENTRO/quebrada_del_condorito.jpeg}">
+    </div>
+    <div class="slide">
+        <img th:src="@{/img/CENTRO/san_guillermo.jpeg}">
+    </div>
+    <div class="slide">
+        <img th:src="@{/img/CENTRO/traslasierra_.jpeg}">
+    </div>
+    <div class="navigation">
+        <div class="btn active"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+    </div>
+</div>
+<script th:src="@{/js/SlideParques.js}"></script>
+</body>
+
+</html>
