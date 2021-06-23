@@ -1,6 +1,10 @@
 package com.proyectoIntegrador.proyecto_integrador.model;
 
+import org.springframework.web.bind.annotation.ModelAttribute;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table
@@ -16,18 +20,17 @@ public class Encuesta {
     private boolean P2;
     @Column(name="CantParques")
     private int cantidad_Parques;
+    @Column(name="preferencias")
+    private String preferencias;
 
-    protected Encuesta(){}
+    public Encuesta(){}
 
-
-    public Encuesta(long id, boolean p1, boolean p2, int cantidad_Parques){
+    public Encuesta(long id, boolean p1, boolean p2, int cantidad_Parques,int intereses){
         super();
         this.id=id;
         this.P1=p1;
         this.P2=p2;
         this.cantidad_Parques=cantidad_Parques;
-
-
 
     }
 

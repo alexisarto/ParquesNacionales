@@ -16,10 +16,7 @@ public class PaginaController {
         return "home";
     }
 
-    @GetMapping("/encuesta")
-    public String encuesta(){
-        return "encuesta";
-    }
+
 
     @GetMapping("/Mapa")
     public String mapa(){
@@ -45,7 +42,6 @@ public class PaginaController {
     public ViewResolver viewResolver() {
         ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
         templateResolver.setTemplateMode("XHTML");
-        templateResolver.setPrefix("views/");
         templateResolver.setSuffix(".html");
 
         SpringTemplateEngine engine = new SpringTemplateEngine();

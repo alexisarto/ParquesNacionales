@@ -1,10 +1,13 @@
 package com.proyectoIntegrador.proyecto_integrador.repository;
 
 import com.proyectoIntegrador.proyecto_integrador.model.Encuesta;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface EncuestaRepository extends CrudRepository<Encuesta, Long>{
+import javax.persistence.EntityManager;
+
+public interface EncuestaRepository extends JpaRepository<Encuesta, Long> {
+
+
 
 
 }

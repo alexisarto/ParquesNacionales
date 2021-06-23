@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:form="http://www.springframework.org/tags/form">
+<html xmlns:th="https://thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,44 +33,43 @@
     </nav>
   </section>
 </header>
-<form method="POST" th:action="@{/obtenerResultados}">
-  <section class="encabezado_encuesta">
-    <h1>Parques Nacionales</h1>
-    <h3>Responde este cuestionario sobre parques nacionales</h3>
-  </section>
-  <hr>
-  <section class="preguntas_encuesta">
-    <label class="pregunta">¿Sabes lo que es un Parque Nacional?</label>
-    <br>
-    <div style="width: 100%;display: flex;justify-content: center;">
-      <input class="radio_button" id="Si" type="radio" name="P1">Si
-      <input class="radio_button" id="No" type="radio" name="P1">No
-    </div>
-
-
-
-    <label class="pregunta">¿Conociste algun parque nacional de la República Argentina?</label>
-    <br>
-    <div style="width: 100%;display: flex;justify-content: center;">
-      <input class="radio_button" type="radio" name="P1">Si
-      <input class="radio_button" type="radio" name="P1">No
-    </div>
-    <label>En caso de que la respuesta haya sido si, ¿cuantos?</label>
-    <input style="margin-top: 10px;width: 300px;" type="number" min="0">
-    <label>¿Con que motivo visita usted los parques nacionales?</label>
-    <div class="checkbox">
-      <input  type="checkbox" value="actividad">Para hacer alguna actividad especifica
+<div id="contenedor_formulario">
+  <form method="GET" th:action="@{/guardarEncuesta}" th:object="${encuesta}">
+    <section class="encabezado_encuesta">
+      <h1>Parques Nacionales</h1>
+      <h3>Responde este cuestionario sobre parques nacionales</h3>
+    </section>
+    <hr>
+    <section class="preguntas_encuesta">
+      <label class="pregunta">¿Sabes lo que es un Parque Nacional?</label>
       <br>
-      <input  type="checkbox" value="animales">Para avistar animales
+      <div style="width: 100%;display: flex;justify-content: center;">
+        <input class="radio_button" id="Si" type="radio" name="P1" value="true" th:field="${encuesta.P1}">Si
+        <input class="radio_button" id="No" type="radio" name="P1" value="false" th:field="${encuesta.P1}">No
+      </div>
+      <label class="pregunta">¿Conociste algun parque nacional de la República Argentina?</label>
       <br>
-      <input  type="checkbox" value="fotos">Para tomar fotos
-      <br>
-      <input  type="checkbox" value="turismo">Por turismo
-    </div>
-    <input type="submit">
+      <div style="width: 100%;display: flex;justify-content: center;">
+        <input class="radio_button" type="radio" value="true" name="P2">Si
+        <input class="radio_button" type="radio" value="false" name="P2">No
+      </div>
+      <label>En caso de que la respuesta haya sido si, ¿cuantos?</label>
+      <input style="margin-top: 10px;width: 300px;" th:field="${encuesta.cantidad_Parques}" type="number" min="0">
+      <label>¿Con que motivo visita usted los parques nacionales?</label>
+      <div class="checkbox">
+        Para hacer alguna actividad especifica<form:checkbox path="preferencias" value="actividad"/>
+        <br>
+        Para avistar animales<form:checkbox path="preferencias" value="animales"/>
+        <br>
+        Para tomar fotos<form:checkbox path="preferencias" value="fotos"/>
+        <br>
+        Por turismo<form:checkbox path="preferencias" value="turismo"/>
+      </div>
+      <input type="submit">
 
-  </section>
-</form>
+    </section>
+  </form>
+</div>
 
 </body>
 </html>
