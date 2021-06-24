@@ -15,22 +15,24 @@ public class Encuesta {
     @Column(name="Encuesta_id")
     private long id;
     @Column(name="pregunta1")
-    private boolean P1;
+    private String P1;
     @Column(name="pregunta2")
-    private boolean P2;
+    private String P2;
     @Column(name="CantParques")
     private int cantidad_Parques;
     @Column(name="preferencias")
     private String preferencias;
 
+
     public Encuesta(){}
 
-    public Encuesta(long id, boolean p1, boolean p2, int cantidad_Parques,int intereses){
+    public Encuesta(long id, String p1, String p2, int cantidad_Parques,int intereses, String preferencias){
         super();
         this.id=id;
         this.P1=p1;
         this.P2=p2;
         this.cantidad_Parques=cantidad_Parques;
+        this.preferencias=preferencias;
 
     }
 
@@ -42,19 +44,19 @@ public class Encuesta {
         this.id = id;
     }
 
-    public boolean isP1() {
+    public String getP1() {
         return P1;
     }
 
-    public void setP1(boolean p1) {
+    public void setP1(String p1) {
         P1 = p1;
     }
 
-    public boolean isP2() {
+    public String getP2() {
         return P2;
     }
 
-    public void setP2(boolean p2) {
+    public void setP2(String p2) {
         P2 = p2;
     }
 
@@ -64,5 +66,13 @@ public class Encuesta {
 
     public void setCantidad_Parques(int cantidad_Parques) {
         this.cantidad_Parques = cantidad_Parques;
+    }
+
+    public String getPreferencias() {
+        return preferencias;
+    }
+
+    public void setPreferencias(String preferencias) {
+        this.preferencias = preferencias;
     }
 }

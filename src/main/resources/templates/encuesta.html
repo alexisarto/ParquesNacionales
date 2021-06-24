@@ -9,16 +9,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
   <link rel="stylesheet" th:href="@{/styles/header.css}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <title>Encuesta</title>
 </head>
 <body>
+<script>
+  $(document).on('click','#mostrarResultados', function() {
+  $(formulario).replaceWith($(resultados));
+  $(resultados).css("display", "inline-block")
+  });
+</script>
 <header>
   <section class="isologotipo">
     <div class="logo">
       <a href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/PARQUESNACIONALES.png" alt=""></a>
     </div>
     <div class="brand">
-      <h3>Parques Nacionales</h3>
+      <h3>Parques nacionales</h3>
       <h4>República Argentina</h4>
     </div>
   </section>
@@ -34,42 +41,62 @@
   </section>
 </header>
 <div id="contenedor_formulario">
-  <form method="GET" th:action="@{/guardarEncuesta}" th:object="${encuesta}">
+  <form id="formulario" method="POST" th:action="@{/encuesta}" th:object="${encuesta}">
     <section class="encabezado_encuesta">
-      <h1>Parques Nacionales</h1>
+      <h1>Parques nacionales</h1>
       <h3>Responde este cuestionario sobre parques nacionales</h3>
     </section>
     <hr>
     <section class="preguntas_encuesta">
-      <label class="pregunta">¿Sabes lo que es un Parque Nacional?</label>
+      <label class="pregunta">¿Sabes lo que es un parque nacional?</label>
       <br>
       <div style="width: 100%;display: flex;justify-content: center;">
-        <input class="radio_button" id="Si" type="radio" name="P1" value="true" th:field="${encuesta.P1}">Si
-        <input class="radio_button" id="No" type="radio" name="P1" value="false" th:field="${encuesta.P1}">No
+        <input class="radio_button" type="radio" name="P1" value="Si" th:field="${encuesta.P1}" checked="checked">Si
+        <input class="radio_button" type="radio" name="P1" value="No" th:field="${encuesta.P1}">No
       </div>
       <label class="pregunta">¿Conociste algun parque nacional de la República Argentina?</label>
       <br>
       <div style="width: 100%;display: flex;justify-content: center;">
-        <input class="radio_button" type="radio" value="true" name="P2">Si
-        <input class="radio_button" type="radio" value="false" name="P2">No
+        <input class="radio_button" type="radio" value="Si" name="P2" checked="checked">Si
+        <input class="radio_button" type="radio" value="No" name="P2" >No
       </div>
       <label>En caso de que la respuesta haya sido si, ¿cuantos?</label>
       <input style="margin-top: 10px;width: 300px;" th:field="${encuesta.cantidad_Parques}" type="number" min="0">
       <label>¿Con que motivo visita usted los parques nacionales?</label>
       <div class="checkbox">
-        Para hacer alguna actividad especifica<form:checkbox path="preferencias" value="actividad"/>
+        <input type="checkbox" name="preferencias" th:field="${encuesta.preferencias}" value="actividad">Para hacer alguna actividad especifica
         <br>
-        Para avistar animales<form:checkbox path="preferencias" value="animales"/>
+        <input type="checkbox" name="preferencias" th:field="${encuesta.preferencias}" value="animales">Para avistar animales
         <br>
-        Para tomar fotos<form:checkbox path="preferencias" value="fotos"/>
+        <input type="checkbox" name="preferencias" th:field="${encuesta.preferencias}" value="fotos">Para tomar fotos
         <br>
-        Por turismo<form:checkbox path="preferencias" value="turismo"/>
+        <input type="checkbox" name="preferencias" th:field="${encuesta.preferencias}" value="turismo">Por turismo
       </div>
-      <input type="submit">
+      <input type="submit" id="submit">
+      <input type="button" id="mostrarResultados" value="Resultados">
 
     </section>
   </form>
 </div>
+<br>
+<table id="resultados" style="display: none">
+  <tr>
+    <th>¿Sabe lo que es un parque nacional?</th>
+    <th>¿Visitó alguno?</th>
+    <th>¿Cuantos?</th>
+    <th>¿Con que motivo?</th>
+  </tr>
+  <tr th:each="encuesta : ${encuestas}">
+    <td th:text="${encuesta.P1}"></td>
+    <td th:text="${encuesta.P2}"></td>
+    <td th:text="${encuesta.cantidad_Parques}"></td>
+    <td th:text="${encuesta.preferencias}"></td>
+  </tr>
+  <!--<tr>
+    <td th:text="${encuestas.size()}"></td>
+  </tr>
+  <progress th:max="${encuestas.size}" th:value="${encuestas}"></progress>-->
+</table>
 
 </body>
 </html>
