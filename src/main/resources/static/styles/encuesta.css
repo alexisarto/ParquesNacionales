@@ -18,7 +18,15 @@ body{
 
 
 
-
+input[type=button], input[type=submit]{
+    color: white;
+    letter-spacing: 2px;
+    padding: 10px;
+    background-color: transparent;
+    margin: 8px;
+    border-radius: 5px;
+    align-items: center;
+}
 #contenedor_formulario{
     margin-left: 20vw;
 }
@@ -40,6 +48,7 @@ input[type="checkbox" i] {
     margin: 3px 3px 3px 144px!important;
     padding: initial;
     border: initial;
+    
 }
 
 form{
@@ -66,9 +75,13 @@ form{
     border-radius: 5px;
     height: fit-content;
     background-color: #fc6500;
+    font-size: 2.2vh;
+    
 }
 th{
     margin: 5px;
+    padding: 5px;
+    border-bottom: 1px solid black;
 }
 table, td{
     width: 500px;
@@ -114,4 +127,9 @@ hr{
     width: 100%;
     margin: 5px 5px;
     padding: 10px 10px;
+}
+.sub{
+    margin: 10px;
+    padding: 2px;
+    
 }

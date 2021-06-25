@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" th:href="@{/styles/encuesta.css}">
+  
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
   <link rel="stylesheet" th:href="@{/styles/header.css}">
@@ -72,14 +73,15 @@
         <br>
         <input type="checkbox" name="preferencias" th:field="${encuesta.preferencias}" value="turismo">Por turismo
       </div>
+      <div class="sub">
       <input type="submit" id="submit">
-      <input type="button" id="mostrarResultados" value="Resultados">
-
+      <input type="button" id="mostrarResultados" value="Ver los Resultados">
+      </div>
     </section>
   </form>
 </div>
 <br>
-<table id="resultados" style="display: none">
+<table id="resultados" style="display: none;">
   <tr>
     <th>¿Sabe lo que es un parque nacional?</th>
     <th>¿Visitó alguno?</th>
