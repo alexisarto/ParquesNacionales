@@ -19,14 +19,16 @@ body{
 
 
 input[type=button], input[type=submit]{
-    color: white;
+    color: rgb(255, 255, 255);
     letter-spacing: 2px;
-    padding: 10px;
-    background-color: transparent;
-    margin: 8px;
-    border-radius: 5px;
+    padding: 12px;
+    background-color: #e26918;
+    margin: 10px;
+    border-radius: 10px;
     align-items: center;
+    font-size: 15px;
 }
+
 #contenedor_formulario{
     margin-left: 20vw;
 }
@@ -122,14 +124,21 @@ hr{
 }
 
 .checkbox{
-    display: inline;
+    display: flex;
     justify-content: center;
     width: 100%;
     margin: 5px 5px;
     padding: 10px 10px;
+    font-size: 17px;
+    
+}
+#num{
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
 }
 .sub{
     margin: 10px;
-    padding: 2px;
-    
+    padding: 5px;
 }
