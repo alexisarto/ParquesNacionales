@@ -8,5 +8,6 @@ import javax.persistence.EntityManager;
 import java.util.List;
 
 public interface EncuestaRepository extends JpaRepository<Encuesta, Long> {
+
 }
 

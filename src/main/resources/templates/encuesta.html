@@ -19,6 +19,7 @@
   $(formulario).replaceWith($(resultados));
   $(resultados).css("display", "inline-block")
   });
+
 </script>
 <header>
   <section class="isologotipo">
@@ -52,14 +53,14 @@
       <label class="pregunta">¿Sabes lo que es un parque nacional?</label>
       <br>
       <div style="width: 100%;display: flex;justify-content: center;">
-        <input class="radio_button" type="radio" name="P1" value="Si" th:field="${encuesta.P1}" checked="checked">Si
-        <input class="radio_button" type="radio" name="P1" value="No" th:field="${encuesta.P1}">No
+        <input class="radio_button" type="radio" name="P1" value="Si" th:field="${encuesta.p1}">Si
+        <input class="radio_button" type="radio" name="P1" value="No" th:field="${encuesta.p1}">No
       </div>
       <label class="pregunta">¿Conociste algun parque nacional de la República Argentina?</label>
       <br>
       <div style="width: 100%;display: flex;justify-content: center;">
-        <input class="radio_button" type="radio" value="Si" name="P2" checked="checked">Si
-        <input class="radio_button" type="radio" value="No" name="P2" >No
+        <input class="radio_button" type="radio" value="Si" name="P2">Si
+        <input class="radio_button" type="radio" value="No" name="P2">No
       </div>
       <label>En caso de que la respuesta haya sido si, ¿cuantos?</label>
       <input style="margin-top: 10px;width: 300px;" th:field="${encuesta.cantidad_Parques}" type="number" min="0">
@@ -94,10 +95,7 @@
     <td th:text="${encuesta.cantidad_Parques}"></td>
     <td th:text="${encuesta.preferencias}"></td>
   </tr>
-  <!--<tr>
-    <td th:text="${encuestas.size()}"></td>
-  </tr>
-  <progress th:max="${encuestas.size}" th:value="${encuestas}"></progress>-->
+  <p style="text-align: center">[[${cantidadEncuestas}]] encuestas realizadas.</p>
 </table>
 
 </body>

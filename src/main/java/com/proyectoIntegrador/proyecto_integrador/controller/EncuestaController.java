@@ -18,15 +18,8 @@ public class EncuestaController {
 
     private static List<Encuesta> encuestas = new ArrayList<Encuesta>();
 
-
     @Autowired
     EncuestaRepository repository;
-
-
-    @GetMapping("/getAPISysdate")
-    public String getAPISysdate(){
-        return new Date().toString();
-    }
 
     @ModelAttribute("encuesta")
     public Encuesta nuevaEncuesta(){
@@ -42,6 +35,7 @@ public class EncuestaController {
     public String guardarEncuesta(Model modelo, Encuesta encuesta){
         repository.save(encuesta);
         encuestas.add(encuesta);
+        modelo.addAttribute("cantidadEncuestas",repository.count());
         return this.actualizarModelo(modelo, nuevaEncuesta());
     }
 
@@ -51,8 +45,12 @@ public class EncuestaController {
         return "encuesta";
     }
 
-    /*private int contarP1True(){
-    }*/
+
+
+
+
+
+
 
 
 
