@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" th:href="@{/styles/encuesta.css}">
-  <link rel="stylesheet" href="/src/main/resources/static/styles/encuesta.css">
-  <link rel="stylesheet" href="/src/main/resources/static/styles/header.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
   <link rel="stylesheet" th:href="@{/styles/header.css}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Quicksand:wght@500&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <title>Encuesta</title>
 </head>
 <body>
+
 <script>
   $(document).on('click','#mostrarResultados', function() {
   $(formulario).replaceWith($(resultados));
-  $(resultados).css("display", "inline-block")
-  });
-
+  $(resultados).css("display", "inline-block")});
 </script>
+
 <header>
   <section class="isologotipo">
     <div class="logo">
@@ -79,7 +79,6 @@
         <input type="submit" id="submit">
         <input type="button" id="mostrarResultados" value="Ver los Resultados">
       </div>
-      
     </section>
   </form>
 </div>

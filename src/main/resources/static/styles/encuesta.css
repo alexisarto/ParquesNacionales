@@ -16,23 +16,21 @@ body{
     flex-direction: column;
 }
 
-
-
 input[type=button], input[type=submit]{
     color: rgb(255, 255, 255);
     letter-spacing: 2px;
     padding: 12px;
-    background-color: #e26918;
+    background-color: #8d8d8d;
     margin: 10px;
     border-radius: 10px;
     align-items: center;
     font-size: 15px;
+    font-family: 'Quicksand', sans-serif!important;
 }
 
 #contenedor_formulario{
     margin-left: 20vw;
 }
-
 
 label{
     margin-top: 15px;
@@ -126,14 +124,12 @@ hr{
 }
 
 .checkbox{
-    display: flex;
-    justify-content: center;
     width: 100%;
     margin: 5px 5px;
     padding: 10px 10px;
     font-size: 17px;
-    
 }
+
 #num{
     font-size: 15px;
     border-radius: 10px;
@@ -144,5 +140,4 @@ hr{
 .sub{
     margin: 10px;
     padding: 2px;
-
 }
