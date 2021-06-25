@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" th:href="@{/styles/encuesta.css}">
-  
+  <link rel="stylesheet" href="/src/main/resources/static/styles/encuesta.css">
+  <link rel="stylesheet" href="/src/main/resources/static/styles/header.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
   <link rel="stylesheet" th:href="@{/styles/header.css}">
@@ -63,7 +64,7 @@
         <input class="radio_button" type="radio" value="No" name="P2">No
       </div>
       <label>En caso de que la respuesta haya sido si, ¿cuantos?</label>
-      <input style="margin-top: 10px;width: 300px;" th:field="${encuesta.cantidad_Parques}" type="number" min="0">
+      <input id="num" style="margin-top: 10px;width: 300px;" th:field="${encuesta.cantidad_Parques}" type="number" min="0" max="44">
       <label>¿Con que motivo visita usted los parques nacionales?</label>
       <div class="checkbox">
         <input type="checkbox" name="preferencias" th:field="${encuesta.preferencias}" value="actividad">Para hacer alguna actividad especifica
@@ -75,9 +76,10 @@
         <input type="checkbox" name="preferencias" th:field="${encuesta.preferencias}" value="turismo">Por turismo
       </div>
       <div class="sub">
-      <input type="submit" id="submit">
-      <input type="button" id="mostrarResultados" value="Ver los Resultados">
+        <input type="submit" id="submit">
+        <input type="button" id="mostrarResultados" value="Ver los Resultados">
       </div>
+      
     </section>
   </form>
 </div>
